@@ -1,0 +1,16 @@
+[package]
+name = "appletv_remote"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+prost = "0.13.4"          # Protobuf support in Rust
+prost-types = "0.13.4"
+protobuf = "3.7.1"
+tokio = { version = "1", features = ["full"] } # For async I/O (if you're sending over the network)
+mdns = "3.0.0"
+futures-util = "0.3.1"
+
+[build-dependencies]
+prost-build = "0.13.4"    # To generate Rust code from .proto files
+protobuf-codegen = "3.7.1"
